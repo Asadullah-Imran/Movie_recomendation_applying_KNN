@@ -29,7 +29,7 @@ const movieDetailsContent = getElementOrThrow("movieDetailsContent");
 
 // API Configuration
 // NOTE: Update API_BASE_URL for production deployment
-const API_BASE_URL = "http://localhost:8000"; // Change to your backend URL
+const API_BASE_URL = "https://movie-recomendation-applying-knnso.onrender.com"; // Updated to Render backend URL
 
 // Helper to get element and throw if not found
 function getElementOrThrow(id) {
