@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineMatch - Intelligent Movie Recommendations</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo" id="logoHome" style="cursor: pointer">
+          <i class="fas fa-film"></i>
+          <h1>CineMatch</h1>
+        </div>
+        <!-- Removed nav-links -->
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Discover Your Next Favorite Movie</h2>
+          <p>Intelligent recommendations powered by hybrid algorithms</p>
+          <div class="hero-search" style="margin-bottom: 1em">
+            <input type="text" id="heroSearch" placeholder="Search movies..." />
+            <button id="heroSearchBtn">Search</button>
+          </div>
+          <div class="hero-search">
+            <input
+              type="text"
+              id="recommendSearch"
+              placeholder="Find recommendations (type a movie title)"
+              autocomplete="off"
+            />
+            <div id="recommendAutocomplete" class="autocomplete-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Sections -->
+      <section id="homeSection">
+        <div class="section-header">
+          <h3>Popular This Week</h3>
+          <a href="#" class="see-all">See All</a>
+        </div>
+        <div class="movies-grid" id="popularMovies"></div>
+
+        <div class="section-header">
+          <h3>Top By Genre</h3>
+        </div>
+        <div class="genre-tabs" id="genreTabs"></div>
+        <div class="movies-grid" id="genreMovies"></div>
+
+        <div class="section-header">
+          <h3>Recently Released</h3>
+          <a href="#" class="see-all">See All</a>
+        </div>
+        <div class="movies-grid" id="trendingMovies"></div>
+      </section>
+
+      <section id="searchSection" class="hidden">
+        <div class="section-header">
+          <h3>Search Results</h3>
+        </div>
+        <div id="searchResults" class="movies-grid"></div>
+        <div id="searchLoader" class="loader">
+          <div class="spinner"></div>
+          <p>Searching movies...</p>
+        </div>
+      </section>
+
+      <section id="genresSection" class="hidden">
+        <div class="section-header">
+          <h3>Browse By Genre</h3>
+        </div>
+        <div class="genres-container" id="genresContainer"></div>
+      </section>
+
+      <section id="trendingSection" class="hidden">
+        <div class="section-header">
+          <h3>Trending Now</h3>
+        </div>
+        <div class="movies-grid" id="trendingContent"></div>
+      </section>
+
+      <section id="recommendationsSection" class="hidden">
+        <div id="selectedMovie" class="selected-movie-container"></div>
+        <div class="section-header">
+          <h3>Recommended For You</h3>
+        </div>
+        <div id="recommendations" class="movies-grid"></div>
+        <div id="recommendLoader" class="loader">
+          <div class="spinner"></div>
+          <p>Finding recommendations...</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Movie Details Modal -->
+    <div id="movieModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="movieDetailsContent"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>CineMatch</h4>
+            <p>
+              Intelligent movie recommendations powered by hybrid algorithms.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#" id="footerHome">Home</a></li>
+              <li><a href="#" id="footerGenres">Genres</a></li>
+              <li><a href="#" id="footerTrending">Trending</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 CineMatch. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
