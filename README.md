@@ -61,6 +61,18 @@ CineMatch implements a custom K-Nearest Neighbors (KNN) algorithm for movie reco
   - Modal for detailed movie info and recommendations.
   - Responsive design for desktop and mobile.
 
+## Screenshots
+
+Below are some screenshots of the CineMatch application:
+
+| Home Page               | Genre Browsing           |
+| ----------------------- | ------------------------ |
+| ![](images/ss_home.png) | ![](images/ss_genre.png) |
+
+| Movie Details                    | Recommendations                  |
+| -------------------------------- | -------------------------------- |
+| ![](images/ss_movie_details.png) | ![](images/ss_recomendation.png) |
+
 ## Setup & Usage
 
 1. **Clone the repository:**
