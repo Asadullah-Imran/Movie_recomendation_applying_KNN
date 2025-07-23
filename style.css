@@ -860,3 +860,63 @@ footer {
   box-shadow: 0 2px 12px rgba(76, 201, 240, 0.15);
   letter-spacing: 0.5px;
 }
+
+/* --- Responsive Modal Improvements --- */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 15px;
+    max-width: 98vw;
+    width: 98vw;
+  }
+  .movie-modal-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .modal-header-info {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+  .modal-poster,
+  .modal-poster.placeholder {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 8px;
+    max-width: 100vw;
+    width: 100vw;
+  }
+  .movie-modal-header {
+    padding: 0;
+    gap: 10px;
+  }
+  .modal-header-info h2 {
+    font-size: 1.2rem;
+  }
+  .modal-poster,
+  .modal-poster.placeholder {
+    max-width: 180px;
+  }
+}
+
+.movie-modal-header {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.modal-poster,
+.modal-poster.placeholder {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
